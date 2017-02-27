@@ -1,0 +1,62 @@
+/*------------------------------BASIC STYLES------------------------------*/
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #002244;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #A5ACAF;
+    padding: 25px;
+}
+
+/*------------------------------JUMBOTRON STYLES------------------------------*/
+
+/* Override bootstrap jumbotron background */
+.jumbotron{
+    height: 250px;
+    background: url("../img/seattlebg.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+/* Adjust jumbotron display on small screens */
+@media (max-width: 700px) {
+    .jumbotron {
+        background: #A5ACAF;
+        height: 200px;
+    }
+    .jumbotron .logo h1 {
+        text-align: center;
+    }
+}
+
+.jumbotron .logo h1{
+    margin: -.5em .5em 0 0;
+    font-size: 3em;
+    color: #002244;
+}
+
+/*------------------------------CARD STYLES------------------------------*/
+.cardtitle {
+    font-size: 1.1em;
+    color: #69BE28;
+}
+
+.cardheader {
+    margin-top:2em;
+}
+
+.card {
+    width:100%;
+}
+
+.submit {
+    margin-top: 3.5em;
+    background-color: #69BE28;
+}
