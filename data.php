@@ -9,7 +9,11 @@
     <?php include('include/supports.php') ?>
 
     <!--DB Connection-->
-    <?php include('include/connection.php') ?>
+    <?php
+        include_once('include/connection.php');
+        $link = fConnectToDatabase();
+    ?>
+
 
     <!--Tableau JS Supports-->
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
@@ -30,7 +34,6 @@
     $violentCrime = $_GET['violentcrime'];
 ?>
 
-
 <!--PAGE CONTENT-->
 <div class="container">
     <div class="row">
@@ -42,8 +45,13 @@
                 echo "Walk: $walk <br>";
                 echo "Nonviolent Crime: $nvCrime <br>";
                 echo "Rent: $rent <br>";
-                echo "Violent Crime: $violentCrime <br>"
-            ?>
+                echo "Violent Crime: $violentCrime <br>";
+                //Debug - Check DB connection
+                if ($link->connect_error) {
+                    die("Connection failed: " . $link->connect_error);
+                }
+                echo "Connected successfully";
+                ?>
         </div>
     </div>
 </div>
