@@ -3,8 +3,10 @@
 <!--How to Use:-->
 <div class="row">
     <div class="col-sm-4">
-        <img src="img/github.png" class="img-responsive card" style="width: 100%" alt="github">
-        <p class="cardtitle">View Source Code</p>
+        <a href="https://github.com/verhey/seattlelivability" target="_blank">
+            <img src="img/github.png" class="img-responsive card" style="width: 100%" alt="github">
+            <p class="cardtitle">View Source Code</p>
+        </a>
     </div>
     <div class="col-sm-4">
         <a href="data.php">
