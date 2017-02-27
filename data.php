@@ -11,9 +11,7 @@
 <!--HEADER-->
 <?php include('include/header.php')?>
 
-<!--PAGE CONTENT-->
 <?php
-    //traffic=high & housing=high & walkability=high & nonviolentcrime=high &rent=high &violentcrime=high
     //Capture vars from query string
     $traffic = $_GET['traffic'];
     $housing = $_GET['housing'];
@@ -23,6 +21,8 @@
     $violentCrime = $_GET['violentcrime'];
 ?>
 
+
+<!--PAGE CONTENT-->
 <div class="container">
     <div class="row">
         <div class="col-12">
