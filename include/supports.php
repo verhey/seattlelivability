@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<!--favicon.ico should be in root directory-->
+<link rel="icon" href="img/favicon.ico">
 
 <!--JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
