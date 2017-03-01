@@ -27,7 +27,11 @@
         </div>
     </div>
 </div>
-<div class="jumbotron "
+<div class="jumbotron text-center">
+    <a href="selections.php">
+        <input type="button" class="btn btn-lg" value="Find My Neighborhood">
+    </a>
+</div>
 
 <!--ABOUT CARDS-->
 <?php include('include/aboutcards.php')?>
