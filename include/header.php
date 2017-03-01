@@ -22,7 +22,7 @@
 </nav>
 
 <!--JUMBOTRON-->
-<div class="jumbotron text-right">
+<div class="jumbotron skyline text-right">
     <div class="logo">
         <h1>Find Your Neighborhood</h1>
     </div>

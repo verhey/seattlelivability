@@ -14,7 +14,6 @@
         $link = fConnectToDatabase();
     ?>
 
-
     <!--Tableau JS Supports-->
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -51,6 +50,16 @@
                     die("Connection failed: " . $link->connect_error);
                 }
                 echo "Connected successfully";
+
+                $sql = "SELECT * FROM tblNeighborhood";
+
+                $result = mysqli_query($link, $sql)
+                    or die('SQL syntax error: ' . mysqli_error($link));
+
+                $array = mysqli_fetch_array($result);
+
+                echo "<br>ID: ";
+                echo $array['neighborhoodID'];
                 ?>
         </div>
     </div>

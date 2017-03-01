@@ -13,131 +13,21 @@
 
 <!--PAGE CONTENT-->
 <div class="container">
-    <!--Form header-->
-    <div class="col-12 text-left">
-        <div class="row">
-            <h2 class="text-center">Tell us about yourself:</h2>
-            <p class="text-center">
-                <i> In order to make recommendations, we need to know what you're interested in:</i>
+    <div class="row">
+        <div class="col-sm-12">
+            <p>
+                Vegan pinterest dreamcatcher chartreuse, umami scenester four loko whatever snackwave intelligentsia. Live-edge microdosing enamel pin letterpress, messenger bag 3 wolf moon cold-pressed squid. Blue bottle typewriter cold-pressed cliche chambray kinfolk, marfa cornhole migas celiac heirloom actually lyft. PBR&B 90's williamsburg wayfarers kinfolk jean shorts, lo-fi blue bottle godard sartorial lyft direct trade distillery cornhole typewriter. Glossier 3 wolf moon lomo, skateboard intelligentsia coloring book activated charcoal humblebrag microdosing lyft. Hammock hell of cliche messenger bag austin, aesthetic sriracha pork belly letterpress waistcoat. Try-hard fashion axe tote bag hoodie tattooed bushwick.
+                <br>
+                Pour-over vexillologist ramps bicycle rights irony neutra. +1 retro woke, paleo heirloom farm-to-table plaid distillery. Post-ironic you probably haven't heard of them typewriter kale chips chartreuse hexagon. Fashion axe lyft DIY squid, pour-over church-key pitchfork. Tacos fam hella man braid gochujang put a bird on it, echo park tote bag seitan williamsburg franzen photo booth pitchfork fanny pack. Polaroid before they sold out 3 wolf moon biodiesel echo park. Meditation ugh art party, poutine bicycle rights kogi portland vexillologist tacos woke viral bushwick farm-to-table keytar.
+                <br>
+                Readymade ethical marfa, retro literally locavore twee bicycle rights typewriter cardigan sriracha. Shoreditch intelligentsia narwhal bitters, twee 3 wolf moon irony yr prism paleo helvetica polaroid scenester. Bitters listicle raw denim, man braid direct trade mixtape snackwave everyday carry irony iPhone beard live-edge. Helvetica dreamcatcher raclette enamel pin, gochujang art party asymmetrical vape blue bottle crucifix slow-carb jianbing iceland. Truffaut next level letterpress, cliche XOXO schlitz selvage paleo. Roof party hexagon vice selfies franzen organic. Pork belly single-origin coffee locavore try-hard jean shorts, lomo umami tote bag irony tofu paleo microdosing food truck sustainable.
+                <br>
+                Church-key chartreuse crucifix, schlitz freegan fanny pack hexagon raw denim. Fap fashion axe humblebrag seitan bushwick enamel pin, microdosing sartorial. Literally keytar mlkshk four dollar toast gentrify biodiesel. Twee hammock humblebrag brooklyn raclette, XOXO paleo you probably haven't heard of them. Keytar YOLO schlitz microdosing, pug listicle everyday carry blue bottle put a bird on it. Wolf church-key tousled skateboard scenester yr. DIY yuccie poke, scenester organic whatever helvetica banh mi brooklyn everyday carry.
             </p>
-            <hr>
-        </div>
-
-        <div class="row">
-        <!--Template options-->
-        <div class="col-sm-6 text-center">
-            <div>
-                <h3>Let Us Pick For You:</h3>
-                <p><i> Less Accurate: We'll try and guess what you'd like</i></p>
-            </div>
-            <br>
-            <form name="templates">
-                <h4>I am a:</h4>
-                <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-primary">
-                        <input type="radio" name="options" id="student"> Student
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" name="options" id="professional"> Professional
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" name="options" id="parent"> Parent
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" name="options" id="retiree"> Retiree
-                    </label>
-                </div>
-            </form>
-        </div>
-        <div class="col-sm-6 text-center">
-            <h3>Show Me A Neighborhood With:</h3>
-            <p><i> More Accurate: You tell us exactly what you'd like:</i></p>
-            <br>
-
-            <form method="get" id="neighborhoodoptions" class="text-center" action="data.php">
-
-                <!--Left panel-->
-                <div class="col-sm-3">
-                    <!--Traffic-->
-                    <h4 class="text-center">Traffic:</h4>
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="traffic" value="high"> High
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="traffic" value="low"> Low
-                        </label>
-                    </div>
-                    <!--Housing Prices:-->
-                    <h4 class="text-center">Housing Prices:</h4>
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="housing" value="high"> High
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="housing" value="low"> Low
-                        </label>
-                    </div>
-                </div>
-
-                <!--Middle panel-->
-                <div class="col-sm-3">
-                    <!--Walkability-->
-                    <h4 class="text-center">Walkability:</h4>
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="walkability" value="high"> High
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="walkability" value="low"> Low
-                        </label>
-                    </div>
-                    <!--Non-violent Crime-->
-                    <h4 class="text-center">Non-Violent Crime:</h4>
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="nonviolentcrime" value="high"> High
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="nonviolentcrime" value="low"> Low
-                        </label>
-                    </div>
-                </div>
-
-                <!--Right panel:-->
-                <div class="col-sm-3">
-                <!--Rent Prices:-->
-                <h4 class="text-center">Rent Prices:</h4>
-                <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-primary">
-                        <input type="radio" name="rent" value="high"> High
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" name="rent" value="low"> Low
-                    </label>
-                </div>
-                <!--Violent Crime-->
-                <h4 class="text-center">Violent Crime:</h4>
-                <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-primary">
-                        <input type="radio" name="violentcrime" value="high"> High
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" name="violentcrime" value="low"> Low
-                    </label>
-                </div>
-                </div>
-
-                <!--Submit button-->
-                <div class="col-sm-3">
-                    <input type="submit" class="btn btn-lg submit" value="Show Results">
-                </div>
-            </form>
-
-        </div>
         </div>
     </div>
 </div>
+<div class="jumbotron "
 
 <!--ABOUT CARDS-->
 <?php include('include/aboutcards.php')?>
