@@ -13,9 +13,6 @@
         include_once('include/connection.php');
         $link = fConnectToDatabase();
     ?>
-
-    <!--Tableau JS Supports-->
-    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
 </head>
 <body>
 
@@ -56,7 +53,9 @@
             <h3>Traffic: <?php echo $traffic?></h3>
                 <p>
                     <?php
-                        fGetTraffic($link, $traffic);
+                        $neighborhoods = fGetTraffic($link, $traffic);
+                        echo "Neighborhoods: $neighborhoods";
+                        echo "<a href=viz_traffic.php?neighborhoods=" . $neighborhoods . ">" . "Test</a>";
                     ?>
                 </p>
             <h3>Housing: <?php echo $housing?></h3>

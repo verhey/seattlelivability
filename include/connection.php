@@ -22,6 +22,7 @@
                 FROM tblTraffic t
                 INNER JOIN tblNeighborhood n
                   ON n.neighborhoodID = t.neighborhoodID ";
+        $neighborhoods = "";
 
         if($preference == "high") $sql .= "ORDER BY worstToBestRank ASC LIMIT 5";
         else $sql .= "ORDER BY worstToBestRank DESC LIMIT 5";
@@ -31,9 +32,10 @@
 
         while($array = mysqli_fetch_array($result)) {
             $neighborhoodID = $array['neighborhoodID'];
-            $neighborhoodName = $array['neighborhoodName'];
-            echo "<br>Neighborhood ID: $neighborhoodID - Neighborhood Name: $neighborhoodName";
+            $neighborhoods .= ", $neighborhoodID";
         }
+
+        return $neighborhoods = urlencode(substr($neighborhoods, 2));
     }
 
     //Returns housing
