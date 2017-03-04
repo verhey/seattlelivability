@@ -5,6 +5,7 @@
     <title>Seattle Livability</title>
     <meta name="description" content="Find your neighborhood in Seattle">
     <?php include('include/supports.php') ?>
+    <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -35,7 +36,7 @@
                     <h4>I am a:</h4>
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <input type="radio" name="options" id="student"> Student
+                            <input type="radio" name="options" id="student" onchange=setStudent()> Student
                         </label>
                         <label class="btn btn-primary">
                             <input type="radio" name="options" id="professional"> Professional
@@ -61,21 +62,21 @@
                         <!--Traffic-->
                         <h4 class="text-center">Traffic:</h4>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary">
-                                <input type="radio" name="traffic" value="high"> High
+                            <label class="btn btn-primary" id="labelTrafHigh">
+                                <input type="radio" name="traffic" value="high" id="inputTrafHigh"> High
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="traffic" value="low"> Low
+                            <label class="btn btn-primary" id="labelTrafLow">
+                                <input type="radio" name="traffic" value="low" id="inputTrafLow"> Low
                             </label>
                         </div>
                         <!--Housing Prices:-->
                         <h4 class="text-center">Housing Prices:</h4>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary">
-                                <input type="radio" name="housing" value="high"> High
+                            <label class="btn btn-primary" id="labelHouseHigh">
+                                <input type="radio" name="housing" value="high" id="inputHouseHigh"> High
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="housing" value="low"> Low
+                            <label class="btn btn-primary" id="labelHouseLow">
+                                <input type="radio" name="housing" value="low" id="inputHouseLow"> Low
                             </label>
                         </div>
                     </div>
@@ -85,21 +86,21 @@
                         <!--Walkability-->
                         <h4 class="text-center">Walkability:</h4>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary">
-                                <input type="radio" name="walkability" value="high"> High
+                            <label class="btn btn-primary" id="labelWalkHigh">
+                                <input type="radio" name="walkability" value="high" id="inputWalkHigh"> High
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="walkability" value="low"> Low
+                            <label class="btn btn-primary" id="labelWalkLow">
+                                <input type="radio" name="walkability" value="low" id="inputWalkLow"> Low
                             </label>
                         </div>
                         <!--Non-violent Crime-->
                         <h4 class="text-center">Non-Violent Crime:</h4>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary">
-                                <input type="radio" name="nonviolentcrime" value="high"> High
+                            <label class="btn btn-primary" id="labelNVCHigh">
+                                <input type="radio" name="nonviolentcrime" value="high" id="inputNVCHigh"> High
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="nonviolentcrime" value="low"> Low
+                            <label class="btn btn-primary" id="labelNCVLow">
+                                <input type="radio" name="nonviolentcrime" value="low" id="inputNVCLow"> Low
                             </label>
                         </div>
                     </div>
@@ -109,28 +110,29 @@
                         <!--Rent Prices:-->
                         <h4 class="text-center">Rent Prices:</h4>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary">
-                                <input type="radio" name="rent" value="high"> High
+                            <label class="btn btn-primary" id="labelRentHigh">
+                                <input type="radio" name="rent" value="high" id="inputRentHigh"> High
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="rent" value="low"> Low
+                            <label class="btn btn-primary" id="labelRentLow">
+                                <input type="radio" name="rent" value="low" id="inputRentLow"> Low
                             </label>
                         </div>
                         <!--Violent Crime-->
                         <h4 class="text-center">Violent Crime:</h4>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary">
-                                <input type="radio" name="violentcrime" value="high"> High
+                            <label class="btn btn-primary" id="labelVCHigh">
+                                <input type="radio" name="violentcrime" value="high" id="inputVCHigh"> High
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="violentcrime" value="low"> Low
+                            <label class="btn btn-primary" id="labelVCLow">
+                                <input type="radio" name="violentcrime" value="low" id="inputVCLow"> Low
                             </label>
                         </div>
                     </div>
 
                     <!--Submit button-->
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 text-center">
                         <input type="submit" class="btn btn-lg submit" value="Show Results">
+                        <input type="button" class="btn btn-lg" value="Reset" onclick=clearSelections()>
                     </div>
                 </form>
 

@@ -21,6 +21,44 @@
     }
 }());
 
+function clearSelections() {
+    //Clear all existing selections
+    var allRadio = document.getElementsByTagName("input");
+    for (var i=0; i < allRadio.length; i++)
+    {
+        if (allRadio[i].type == "radio") allRadio[i].checked = "false";
+    }
+
+    //Reset button state
+    var allLabel = document.getElementsByTagName("label");
+    for (var c=0; c < allLabel.length; c++)
+    {
+        if (allLabel[c].className == "btn btn-primary active") allLabel[c].className = "btn btn-primary";
+    }
+}
+
+function setStudent() {
+    clearSelections();
+    //Traffic - High
+    document.getElementById('inputTrafHigh').checked = "true";
+    document.getElementById('labelTrafHigh').className += " active";
+    //Housing - Low
+    document.getElementById('inputHouseLow').checked = "true";
+    document.getElementById('labelHouseLow').className += " active";
+    //Walkability - High
+    document.getElementById('inputWalkHigh').checked = "true";
+    document.getElementById('labelWalkHigh').className += " active";
+    //NV Crime - High
+    document.getElementById('inputNVCHigh').checked = "true";
+    document.getElementById('labelNVCHigh').className += " active";
+    //Rent - Low
+    document.getElementById('inputRentLow').checked = "true";
+    document.getElementById('labelRentLow').className += " active";
+    //V Crime - High
+    document.getElementById('inputVCHigh').checked = "true";
+    document.getElementById('labelVCHigh').className += " active";
+}
+
 /*TABLEAU: LOAD VIZZES*/
 
 //Traffic

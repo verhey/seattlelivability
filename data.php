@@ -16,7 +16,6 @@
 
     <!--Tableau JS Supports-->
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
