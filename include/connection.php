@@ -133,8 +133,13 @@
 
         while($array = mysqli_fetch_array($result)) {
             $neighborhoodID = $array['neighborhoodID'];
-            $neighborhoodName = $array['neighborhoodName'];
-            echo "<br>Neighborhood ID: $neighborhoodID - Neighborhood Name: $neighborhoodName";
+            $name = $array['neighborhoodName'];
+            $incidents = $array['incidentCount'];
+            echo "<tr>";
+            echo "<td>$name</td>";
+            echo "<td class='text-center'>$incidents</td>";
+            echo "<td class='text-center'><a class='btn btn-default btn-sm' target='_blank' href='viz_nvcrime.php?neighborhood=$neighborhoodID'>Go</a></td>";
+            echo "</tr>";
         }
     }
 
@@ -153,28 +158,40 @@
 
         while($array = mysqli_fetch_array($result)) {
             $neighborhoodID = $array['neighborhoodID'];
-            $neighborhoodName = $array['neighborhoodName'];
-            echo "<br>Neighborhood ID: $neighborhoodID - Neighborhood Name: $neighborhoodName";
-        }
+            $name = $array['neighborhoodName'];
+            $zri = $array['ZRI'];
+            $zriRank = $array['zriRank'];
+            echo "<tr>";
+            echo "<td>$name</td>";
+            echo "<td class='text-center'>". fAsDollars($zri) . "</td>";
+            echo "<td class='text-center'>$zriRank</td>";
+            echo "<td class='text-center'><a class='btn btn-default btn-sm' target='_blank' href='viz_rent.php?neighborhood=$neighborhoodID'>Go</a></td>";
+            echo "</tr>";        }
     }
 
     //Returns violent crime
-    function fgetVCrime ($link, $preference) {
-        $sql = "SELECT v.neighborhoodID, n.neighborhoodName, incidentCount, worstToBestRank 
+    function fgetVCrime ($link, $preference)
+    {
+        $sql = "SELECT v.neighborhoodID, n.neighborhoodName, incidentCount 
                 FROM tblViolentCrime v
                 INNER JOIN tblNeighborhood n
                     ON n.neighborhoodID = v.neighborhoodID ";
 
-        if($preference == "high") $sql .= "ORDER BY worstToBestRank ASC LIMIT 5";
+        if ($preference == "high") $sql .= "ORDER BY worstToBestRank ASC LIMIT 5";
         else $sql .= "ORDER BY worstToBestRank DESC LIMIT 5";
 
         $result = mysqli_query($link, $sql)
         or die('SQL Syntax Error ' . mysqli_error($link));
 
-        while($array = mysqli_fetch_array($result)) {
+        while ($array = mysqli_fetch_array($result)) {
             $neighborhoodID = $array['neighborhoodID'];
-            $neighborhoodName = $array['neighborhoodName'];
-            echo "<br>Neighborhood ID: $neighborhoodID - Neighborhood Name: $neighborhoodName";
+            $name = $array['neighborhoodName'];
+            $incidents = $array['incidentCount'];
+            echo "<tr>";
+            echo "<td>$name</td>";
+            echo "<td class='text-center'>$incidents</td>";
+            echo "<td class='text-center'><a class='btn btn-default btn-sm' target='_blank' href='viz_vcrime.php?neighborhood=$neighborhoodID'>Go</a></td>";
+            echo "</tr>";
         }
     }
 

@@ -95,29 +95,52 @@
             <!--View Non Violent Crime Results-->
             <hr>
             <h3 class="text-center">Non-Violent Crime: <?php echo ucfirst($nvCrime);?>est Number of Incidents</h3>
-                <p>
-                    <?php
-                        fgetNVCrime($link, $nvCrime);
-                    ?>
-                </p>
+            <table class="table table-sm">
+                <thead>
+                <tr>
+                    <th>Neighborhood</th>
+                    <th class="text-center">Number of Incidents</th>
+                    <th class="text-center">View In Tableau</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php fgetNVCrime($link, $nvCrime);?>
+                </tbody>
+            </table>
+
 
             <!--View Rent Results-->
             <hr>
-            <h3>Rent Prices: <?php echo $rent?></h3>
-                <p>
-                    <?php
-                        fgetRent($link, $rent);
-                    ?>
-                </p>
+            <h3>Rent Prices: <?php echo ucfirst($rent);?>est Prices</h3>
+            <table class="table table-sm">
+                <thead>
+                <tr>
+                    <th>Neighborhood</th>
+                    <th class="text-center"><a target="_blank" href="https://www.zillow.com/research/zillow-rent-index-methodology-2393/">ZRI</a></th>
+                    <th class="text-center">ZRI Rank</th>
+                    <th class="text-center">View In Tableau</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php fgetRent($link, $rent);?>
+                </tbody>
+            </table>
 
             <!--View Violent Crime Results-->
             <hr>
-            <h3>Violent Crime: <?php echo $violentCrime?></h3>
-                <p>
-                    <?php
-                        fgetVCrime($link, $violentCrime);
-                    ?>
-                </p>
+            <h3>Violent Crime: <?php echo ucfirst($violentCrime);?>est Number Of Incidents</h3>
+            <table class="table table-sm">
+                <thead>
+                <tr>
+                    <th>Neighborhood</th>
+                    <th class="text-center">Number of Incidents</th>
+                    <th class="text-center">View In Tableau</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php fgetVCrime($link, $violentCrime);?>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
