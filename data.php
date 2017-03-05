@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <!--Page basics-->
-    <title>Seattle Livability - Neighborhood Data</title>
-    <meta name="description" content="View data on particular neighborhood in Seattle">
+    <title>Results</title>
+    <meta name="description" content="Form results - Seattle Livability">
 
     <!--Load rest of page basics-->
     <?php include('include/supports.php') ?>
@@ -20,7 +20,7 @@
 <?php include('include/header.php')?>
 
 <?php
-    //Capture vars from query string
+    //Capture vars from query string first
     $traffic = $_GET['traffic'];
     $housing = $_GET['housing'];
     $walk = $_GET['walkability'];
@@ -41,47 +41,77 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <?php
-                //Debug - Check DB connection
-                if ($link->connect_error) {
-                    die("Connection failed: " . $link->connect_error);
-                }
-                echo "Connected successfully";
-                ?>
-            <br>
-            <h1>Your Results:</h1>
-            <h3>Traffic: <?php echo $traffic?></h3>
-                <p>
-                    <?php
-                        $neighborhoods = fGetTraffic($link, $traffic);
-                        echo "Neighborhoods: $neighborhoods";
-                        echo "<a href=viz_traffic.php?neighborhoods=" . $neighborhoods . ">" . "Test</a>";
-                    ?>
-                </p>
-            <h3>Housing: <?php echo $housing?></h3>
-                <p>
-                    <?php
-                        fGetHousing($link, $housing);
-                    ?>
-                </p>
-            <h3>Walkability: <?php echo $walk?></h3>
-                <p>
-                <?php
-                        fgetWalkability($link, $walk);
-                    ?>
-                </p>
-            <h3>Non-Violent Crime: <?php echo $nvCrime?></h3>
+            <h1 class="text-center">Your Results:</h1><hr>
+
+            <!--View Traffic Results-->
+            <h3 class="text-center">Traffic: <?php echo ucfirst($traffic);?>est Incidents</h3>
+                <table class="table table-sm">
+                    <thead>
+                    <tr>
+                        <th>Neighborhood</th>
+                        <th class="text-center">Traffic Incidents</th>
+                        <th class="text-center">View In Tableau</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php fGetTraffic($link, $traffic);?>
+                    </tbody>
+                </table>
+
+            <!--View Housing Results-->
+            <hr>
+            <h3 class="text-center">Housing: <?php echo ucfirst($housing);?>est Prices</h3>
+                <table class="table table-sm">
+                    <thead>
+                    <tr>
+                        <th>Neighborhood</th>
+                        <th class="text-center"><a target="_blank" href="https://www.zillow.com/research/zhvi-methodology-6032/">ZHVI</a></th>
+                        <th class="text-center">ZHVI Rank</th>
+                        <th class="text-center">View In Tableau</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php fGetHousing($link, $housing);?>
+                    </tbody>
+                </table>
+
+            <!--View Walk Score Results-->
+            <hr>
+            <h3 class="text-center">Walkability: <?php echo ucfirst($walk);?>est Walk Scores</h3>
+                <table class="table table-sm">
+                    <thead>
+                    <tr>
+                        <th>Neighborhood</th>
+                        <th class="text-center"><a target="_blank" href="https://www.walkscore.com/">Walk Score</a></th>
+                        <th class="text-center">Number of Restaurants</th>
+                        <th class="text-center">View In Tableau</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php fgetWalkability($link, $walk);?>
+                    </tbody>
+                </table>
+
+            <!--View Non Violent Crime Results-->
+            <hr>
+            <h3 class="text-center">Non-Violent Crime: <?php echo ucfirst($nvCrime);?>est Number of Incidents</h3>
                 <p>
                     <?php
                         fgetNVCrime($link, $nvCrime);
                     ?>
                 </p>
+
+            <!--View Rent Results-->
+            <hr>
             <h3>Rent Prices: <?php echo $rent?></h3>
                 <p>
                     <?php
                         fgetRent($link, $rent);
                     ?>
                 </p>
+
+            <!--View Violent Crime Results-->
+            <hr>
             <h3>Violent Crime: <?php echo $violentCrime?></h3>
                 <p>
                     <?php

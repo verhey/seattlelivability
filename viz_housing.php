@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <!--Page basics-->
-    <title>Tableau - Traffic Incidents</title>
-    <meta name="description" content="View traffic incident data for Seattle Neighborhoods">
+    <title>Tableau - Housing by ZHRI</title>
+    <meta name="description" content="View rent data for Seattle Neighborhoods">
 
     <!--Load rest of page basics-->
     <?php include('include/supports.php') ?>
@@ -12,7 +12,7 @@
         //Capture vars from query string
         $neighborhood = $_GET['neighborhood'];
     ?>
-    <!--Tableau JS Supports-->
+    <!--Tableau JS Supports FIX THE URL-->
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
     <script type="text/javascript">
         function initViz() {
@@ -31,7 +31,7 @@
         }
 
         var viz = new tableau.Viz(containerDiv, url, options);
-            // Create a viz object and embed it in the container div.
+        // Create a viz object and embed it in the container div.
     </script>
 </head>
 <body onload=initViz();>
