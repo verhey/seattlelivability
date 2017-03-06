@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <!--Page basics-->
-    <title>Tableau - Traffic Incidents</title>
-    <meta name="description" content="View traffic incident data for Seattle Neighborhoods">
+    <title>Tableau - Rent</title>
+    <meta name="description" content="View rent data for Seattle Neighborhoods">
 
     <!--Load rest of page basics-->
     <?php include('include/supports.php') ?>
@@ -17,7 +17,7 @@
     <script type="text/javascript">
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/SeattleLivability_TrafficIncidents/Dashboard1",
+                url = "https://public.tableau.com/views/SeattleLivability_Rent/Dashboard1",
                 options = {
                     "[Zone/Beat]" : "<?php echo $neighborhood?>",
                     hideTabs: true,
@@ -31,7 +31,7 @@
         }
 
         var viz = new tableau.Viz(containerDiv, url, options);
-            // Create a viz object and embed it in the container div.
+        // Create a viz object and embed it in the container div.
     </script>
 </head>
 <body onload=initViz();>

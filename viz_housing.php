@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <!--Page basics-->
-    <title>Tableau - Housing by ZHRI</title>
-    <meta name="description" content="View rent data for Seattle Neighborhoods">
+    <title>Tableau - Housing</title>
+    <meta name="description" content="View house price data for Seattle Neighborhoods">
 
     <!--Load rest of page basics-->
     <?php include('include/supports.php') ?>
@@ -12,12 +12,12 @@
         //Capture vars from query string
         $neighborhood = $_GET['neighborhood'];
     ?>
-    <!--Tableau JS Supports FIX THE URL-->
+    <!--Tableau JS Supports-->
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
     <script type="text/javascript">
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/SeattleLivability_TrafficIncidents/Dashboard1",
+                url = "https://public.tableau.com/profile/publish/SeattleLivability_HousePrices/Dashboard2",
                 options = {
                     "[Zone/Beat]" : "<?php echo $neighborhood?>",
                     hideTabs: true,
@@ -44,7 +44,7 @@
     <div class="row">
         <div class="col-12">
             <?php echo $neighborhood;?>
-            <div id="vizContainer" style="width:800px; height:700px;"></div>
+            <div id="vizContainer" style="width:800px; height:1000px;"></div>
         </div>
     </div>
 </div>

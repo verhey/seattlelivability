@@ -17,7 +17,7 @@
     <script type="text/javascript">
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/SeattleLivability_TrafficIncidents/Dashboard1",
+                url = "https://public.tableau.com/views/SeattleLivability_ViolentCrimes/ViolentCrime?",
                 options = {
                     "[Zone/Beat]" : "<?php echo $neighborhood?>",
                     hideTabs: true,
@@ -31,7 +31,7 @@
         }
 
         var viz = new tableau.Viz(containerDiv, url, options);
-            // Create a viz object and embed it in the container div.
+        // Create a viz object and embed it in the container div.
     </script>
 </head>
 <body onload=initViz();>

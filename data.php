@@ -12,6 +12,7 @@
     <?php
         include_once('include/connection.php');
         $link = fConnectToDatabase();
+        include('include/gets.php');
     ?>
 </head>
 <body>
@@ -111,7 +112,7 @@
 
             <!--View Rent Results-->
             <hr>
-            <h3>Rent Prices: <?php echo ucfirst($rent);?>est Prices</h3>
+            <h3 class="text-center">Rent Prices: <?php echo ucfirst($rent);?>est Prices</h3>
             <table class="table table-sm">
                 <thead>
                 <tr>
@@ -128,7 +129,7 @@
 
             <!--View Violent Crime Results-->
             <hr>
-            <h3>Violent Crime: <?php echo ucfirst($violentCrime);?>est Number Of Incidents</h3>
+            <h3 class="text-center">Violent Crime: <?php echo ucfirst($violentCrime);?>est Number Of Incidents</h3>
             <table class="table table-sm">
                 <thead>
                 <tr>
