@@ -19,7 +19,7 @@
             <hr>
             <p>Are you thinking about moving to Seattle? Do you wonder what neighborhoods are most suitable for your needs? Based on crime, walkability, traffic, and cost, our tool allows you to explore what neighborhoods fulfills your needs.
             </p>
-            <p>Utilizing a simple rating system of low or high, what you select dictates what is outputted. Do you want high walkability but low housing costs? Or is low crime and low walkability more important? Based on what you want, our tool gives you the top 5 neighborhoods and accompanying visualizations for you to explore at your pleasing.
+            <p>Utilizing a simple rating system of low or high, what you select dictates what is outputted. Do you want high walkability but low housing costs? Or is low crime and low walkability more important? Based on what you want, our tool gives you the top 5 neighborhoods and accompanying visualizations for you to explore at your pleasure.
             </p>
             <hr>
             <a href="selections.php"><input type="button" class="btn btn-lg" value="Find My Neighborhood"></a>
