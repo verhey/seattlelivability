@@ -5,7 +5,6 @@
     <title>Seattle Livability</title>
     <meta name="description" content="Find your neighborhood in Seattle">
     <?php include('include/supports.php') ?>
-    <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -31,6 +30,8 @@
             <hr>
         </div>
 
+        <!--Load in JS to handle "template" picking"-->
+        <script src="js/main.js"></script>
         <div class="row">
             <!--Template options-->
             <div class="col-sm-6 text-center">
@@ -46,23 +47,26 @@
                             <input type="radio" name="options" id="student" onchange=setStudent()> Student
                         </label>
                         <label class="btn btn-primary">
-                            <input type="radio" name="options" id="professional"> Professional
+                            <input type="radio" name="options" id="professional" onchange=setProfessional()> Professional
                         </label>
                         <label class="btn btn-primary">
-                            <input type="radio" name="options" id="parent"> Parent
+                            <input type="radio" name="options" id="parent" onchange=setParent()> Parent
                         </label>
                         <label class="btn btn-primary">
-                            <input type="radio" name="options" id="retiree"> Retiree
+                            <input type="radio" name="options" id="retiree" onchange=setRetiree()> Retiree
                         </label>
                     </div>
                 </form>
             </div>
+
+
             <div class="col-sm-6 text-center">
                 <h3>Show Me A Neighborhood With:</h3>
                 <p><i> More Accurate: You tell us exactly what you'd like:</i></p>
                 <br>
 
                 <form method="get" id="neighborhoodoptions" class="text-center" action="data.php">
+
                     <!--Left panel-->
                     <div class="col-sm-4">
                         <!--Traffic-->
@@ -117,7 +121,6 @@
                                 <input type="radio" name="housing" value="low" id="inputHouseLow"> Low
                             </label>
                         </div>
-
                     </div>
 
                     <!--Right column-->

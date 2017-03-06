@@ -59,6 +59,72 @@ function setStudent() {
     document.getElementById('labelVCHigh').className += " active";
 }
 
+function setProfessional() {
+    clearSelections();
+    //Traffic - Low
+    document.getElementById('inputTrafLow').checked = "true";
+    document.getElementById('labelTrafLow').className += " active";
+    //Housing - High
+    document.getElementById('inputHouseHigh').checked = "true";
+    document.getElementById('labelHouseHigh').className += " active";
+    //Walkability - High
+    document.getElementById('inputWalkHigh').checked = "true";
+    document.getElementById('labelWalkHigh').className += " active";
+    //NV Crime - Low
+    document.getElementById("inputNVCLow").checked = "true";
+    document.getElementById("labelNCVLow").className += " active";
+    //Rent - High
+    document.getElementById('inputRentHigh').checked = "true";
+    document.getElementById('labelRentHigh').className += " active";
+    //V Crime - High
+    document.getElementById('inputVCHigh').checked = "true";
+    document.getElementById('labelVCHigh').className += " active";
+}
+
+function setRetiree() {
+    clearSelections();
+    //Traffic - Low
+    document.getElementById('inputTrafLow').checked = "true";
+    document.getElementById('labelTrafLow').className += " active";
+    //Housing - High
+    document.getElementById('inputHouseHigh').checked = "true";
+    document.getElementById('labelHouseHigh').className += " active";
+    //Walkability - High
+    document.getElementById('inputWalkHigh').checked = "true";
+    document.getElementById('labelWalkHigh').className += " active";
+    //NV Crime - Low
+    document.getElementById("inputNVCLow").checked = "true";
+    document.getElementById("labelNCVLow").className += " active";
+    //Rent - High
+    document.getElementById('inputRentHigh').checked = "true";
+    document.getElementById('labelRentHigh').className += " active";
+    //V Crime - Low
+    document.getElementById('inputVCLow').checked = "true";
+    document.getElementById('labelVCLow').className += " active";
+}
+
+function setParent() {
+    clearSelections();
+    //Traffic - High
+    document.getElementById('inputTrafHigh').checked = "true";
+    document.getElementById('labelTrafHigh').className += " active";
+    //Housing - High
+    document.getElementById('inputHouseHigh').checked = "true";
+    document.getElementById('labelHouseHigh').className += " active";
+    //Walkability - Low
+    document.getElementById('inputWalkLow').checked = "true";
+    document.getElementById('labelWalkLow').className += " active";
+    //NV Crime - Low
+    document.getElementById("inputNVCLow").checked = "true";
+    document.getElementById("labelNCVLow").className += " active";
+    //Rent - High
+    document.getElementById('inputRentHigh').checked = "true";
+    document.getElementById('labelRentHigh').className += " active";
+    //V Crime - Low
+    document.getElementById('inputVCLow').checked = "true";
+    document.getElementById('labelVCLow').className += " active";
+}
+
 /*TABLEAU: LOAD VIZZES*/
 
 //Traffic
