@@ -9,9 +9,9 @@
         </a>
     </div>
     <div class="col-sm-4">
-        <a href="data.php">
+        <a href="data.php?traffic=high&walkability=high&rent=high&housing=high&violentcrime=high&nonviolentcrime=high">
             <img src="img/viewrawdata.png" class="img-responsive card" alt="tableau">
-            <p class="cardtitle">View Raw Data</p>
+            <p class="cardtitle">View Sample Data</p>
         </a>
     </div>
     <div class="col-sm-4">
