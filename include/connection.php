@@ -16,24 +16,6 @@
     }
 
     // database utility functions ************************************************
-    function fCleanString($link, $UserInput, $MaxLen) {
-        //remove html tags
-        $UserInput = strip_tags($UserInput);
-
-        //Escape special characters - very important.
-        //mysqli_real_escape_string requires database connection
-        $UserInput = mysqli_real_escape_string($link, $UserInput);
-
-        //truncate to max length of database field
-        return substr($UserInput, 0, $MaxLen);
-    }
-
-    function fCleanNumber($UserInput) {
-        $pattern = "/[^0-9\.]/"; //replace everything except 0-9 and period
-        $UserInput = preg_replace($pattern, "", $UserInput);
-        return $UserInput;
-    }
-
     function fAsDollars($value) {
         return '$' . number_format($value, 0);
     }
