@@ -64,7 +64,7 @@
 
                 <form method="get" id="neighborhoodoptions" class="text-center" action="data.php">
                     <!--Left panel-->
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <!--Traffic-->
                         <a href="#" data-toggle="tooltip" title="Understand higher traffic often means a higher number of restaurants, social activity, etc.">
                             <h4 class="text-center">Traffic:</h4>
@@ -75,18 +75,6 @@
                             </label>
                             <label class="btn btn-primary" id="labelTrafLow">
                                 <input type="radio" name="traffic" value="low" id="inputTrafLow"> Low
-                            </label>
-                        </div>
-                        <!--Housing Prices:-->
-                        <a href="#" data-toggle="tooltip" title="Generally, the higher the housing prices, the more schools, parks, etc. are nearby.">
-                            <h4 class="text-center">Housing Prices:</h4>
-                        </a>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary" id="labelHouseHigh">
-                                <input type="radio" name="housing" value="high" id="inputHouseHigh"> High
-                            </label>
-                            <label class="btn btn-primary" id="labelHouseLow">
-                                <input type="radio" name="housing" value="low" id="inputHouseLow"> Low
                             </label>
                         </div>
                         <!--Walkability-->
@@ -104,19 +92,7 @@
                     </div>
 
                     <!--Middle panel-->
-                    <div class="col-sm-6">
-                        <!--Non-violent Crime-->
-                        <a href="#" data-toggle="tooltip" title="Petty crime, property crime, etc. The walkability of a neighborhood is usually directly correlated with its crime rate.">
-                            <h4 class="text-center">Non-Violent Crime:</h4>
-                        </a>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary" id="labelNVCHigh">
-                                <input type="radio" name="nonviolentcrime" value="high" id="inputNVCHigh"> High
-                            </label>
-                            <label class="btn btn-primary" id="labelNCVLow">
-                                <input type="radio" name="nonviolentcrime" value="low" id="inputNVCLow"> Low
-                            </label>
-                        </div>
+                    <div class="col-sm-4">
                         <!--Rent Prices:-->
                         <a href="#" data-toggle="tooltip" title="Generally, the higher the housing prices, the more bars, restaurants, etc. are nearby.">
                             <h4 class="text-center">Rent Prices:</h4>
@@ -129,6 +105,23 @@
                                 <input type="radio" name="rent" value="low" id="inputRentLow"> Low
                             </label>
                         </div>
+                        <!--Housing Prices:-->
+                        <a href="#" data-toggle="tooltip" title="Generally, the higher the housing prices, the more schools, parks, etc. are nearby.">
+                            <h4 class="text-center">Housing Prices:</h4>
+                        </a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary" id="labelHouseHigh">
+                                <input type="radio" name="housing" value="high" id="inputHouseHigh"> High
+                            </label>
+                            <label class="btn btn-primary" id="labelHouseLow">
+                                <input type="radio" name="housing" value="low" id="inputHouseLow"> Low
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <!--Right column-->
+                    <div class="col-sm-4">
                         <!--Violent Crime-->
                         <a href="#" data-toggle="tooltip" title="Obviously nobody wants lots of violent crime. But bars, clubs, or other forms of fun often lead to an upward trend in violent crime in neighborhoods. Something to think about...">
                             <h4 class="text-center">Violent Crime:</h4>
@@ -141,6 +134,18 @@
                                 <input type="radio" name="violentcrime" value="low" id="inputVCLow"> Low
                             </label>
                         </div>
+                        <!--Non-violent Crime-->
+                        <a href="#" data-toggle="tooltip" title="Petty crime, property crime, etc. The walkability of a neighborhood is usually directly correlated with its crime rate.">
+                            <h4 class="text-center">Non-Violent Crime:</h4>
+                        </a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary" id="labelNVCHigh">
+                                <input type="radio" name="nonviolentcrime" value="high" id="inputNVCHigh"> High
+                            </label>
+                            <label class="btn btn-primary" id="labelNCVLow">
+                                <input type="radio" name="nonviolentcrime" value="low" id="inputNVCLow"> Low
+                            </label>
+                        </div>
                     </div>
 
                     <!--Submit button-->
@@ -150,7 +155,6 @@
                         <input type="button" class="btn btn-lg" value="Reset" onclick=clearSelections()>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
