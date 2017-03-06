@@ -11,6 +11,13 @@
 
 <!--HEADER-->
 <?php include('include/header.php')?>
+<!--Init Bootstrap tooltips-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
 
 <!--PAGE CONTENT-->
 <div class="container">
@@ -56,11 +63,12 @@
                 <br>
 
                 <form method="get" id="neighborhoodoptions" class="text-center" action="data.php">
-
                     <!--Left panel-->
-                    <div class="col-sm-3">
+                    <div class="col-sm-6">
                         <!--Traffic-->
-                        <h4 class="text-center">Traffic:</h4>
+                        <a href="#" data-toggle="tooltip" title="Understand higher traffic often means a higher number of restaurants, social activity, etc.">
+                            <h4 class="text-center">Traffic:</h4>
+                        </a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary" id="labelTrafHigh">
                                 <input type="radio" name="traffic" value="high" id="inputTrafHigh"> High
@@ -70,7 +78,9 @@
                             </label>
                         </div>
                         <!--Housing Prices:-->
-                        <h4 class="text-center">Housing Prices:</h4>
+                        <a href="#" data-toggle="tooltip" title="Generally, the higher the housing prices, the more schools, parks, etc. are nearby.">
+                            <h4 class="text-center">Housing Prices:</h4>
+                        </a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary" id="labelHouseHigh">
                                 <input type="radio" name="housing" value="high" id="inputHouseHigh"> High
@@ -79,12 +89,10 @@
                                 <input type="radio" name="housing" value="low" id="inputHouseLow"> Low
                             </label>
                         </div>
-                    </div>
-
-                    <!--Middle panel-->
-                    <div class="col-sm-3">
                         <!--Walkability-->
-                        <h4 class="text-center">Walkability:</h4>
+                        <a href="#" data-toggle="tooltip" title="The more walkable the neighborhood, the more restaurants and shops are nearby.">
+                            <h4 class="text-center">Walkability:</h4>
+                        </a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary" id="labelWalkHigh">
                                 <input type="radio" name="walkability" value="high" id="inputWalkHigh"> High
@@ -93,8 +101,14 @@
                                 <input type="radio" name="walkability" value="low" id="inputWalkLow"> Low
                             </label>
                         </div>
+                    </div>
+
+                    <!--Middle panel-->
+                    <div class="col-sm-6">
                         <!--Non-violent Crime-->
-                        <h4 class="text-center">Non-Violent Crime:</h4>
+                        <a href="#" data-toggle="tooltip" title="Petty crime, property crime, etc. The walkability of a neighborhood is usually directly correlated with its crime rate.">
+                            <h4 class="text-center">Non-Violent Crime:</h4>
+                        </a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary" id="labelNVCHigh">
                                 <input type="radio" name="nonviolentcrime" value="high" id="inputNVCHigh"> High
@@ -103,12 +117,10 @@
                                 <input type="radio" name="nonviolentcrime" value="low" id="inputNVCLow"> Low
                             </label>
                         </div>
-                    </div>
-
-                    <!--Right panel:-->
-                    <div class="col-sm-3">
                         <!--Rent Prices:-->
-                        <h4 class="text-center">Rent Prices:</h4>
+                        <a href="#" data-toggle="tooltip" title="Generally, the higher the housing prices, the more bars, restaurants, etc. are nearby.">
+                            <h4 class="text-center">Rent Prices:</h4>
+                        </a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary" id="labelRentHigh">
                                 <input type="radio" name="rent" value="high" id="inputRentHigh"> High
@@ -118,7 +130,9 @@
                             </label>
                         </div>
                         <!--Violent Crime-->
-                        <h4 class="text-center">Violent Crime:</h4>
+                        <a href="#" data-toggle="tooltip" title="Obviously nobody wants lots of violent crime. But bars, clubs, or other forms of fun often lead to an upward trend in violent crime in neighborhoods. Something to think about...">
+                            <h4 class="text-center">Violent Crime:</h4>
+                        </a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary" id="labelVCHigh">
                                 <input type="radio" name="violentcrime" value="high" id="inputVCHigh"> High
@@ -130,8 +144,9 @@
                     </div>
 
                     <!--Submit button-->
-                    <div class="col-sm-3 text-center">
-                        <input type="submit" class="btn btn-lg submit" value="Show Results">
+                    <div class="col-sm-12 text-center">
+                        <br>
+                        <input type="submit" class="btn btn-lg" value="Show Results">
                         <input type="button" class="btn btn-lg" value="Reset" onclick=clearSelections()>
                     </div>
                 </form>
