@@ -21,6 +21,22 @@
 <?php include('include/header.php')?>
 
 <?php
+    if (
+    empty($_GET['traffic'])
+    OR empty($_GET['housing'])
+    OR empty($_GET['walkability'])
+    OR empty($_GET['nonviolentcrime'])
+    OR empty($_GET['rent'])
+    OR empty($_GET['violentcrime'])
+    ) {
+        echo "<div class='container text-center'>";
+        echo "<img src='img/chris.png' class='center-block'>";
+        echo "<h1>Please Enter All Your Preferences!</h1>";
+        echo "<h2>If you don't, we can't give you accurate information!</h2><br>";
+        echo "<input type='button' class='btn btn-lg text-center' value='Take Me Back'>";
+        die();
+    }
+
     //Capture vars from query string first
     $traffic = $_GET['traffic'];
     $housing = $_GET['housing'];
