@@ -1,6 +1,7 @@
 ## Synopsis
-
-
+Tool to display Tableau Visualizations on Seattle Open Data based on user input on neighborhoods.
+ 
+End goal is to be able to select a desirable neighborhood in the city based on their own values and interests - traffic, bars, etc.
 
 ## Motivation
 
@@ -8,13 +9,20 @@ To create an accessible tool that helps users analyze Seattle’s neighborhoods 
 
 ## Installation
 
-Working version can be found at: URL GOES HERE
+Working version can be found at: yorktown.cbe.wwu.edu/students/161/verheyd/seattlelivability
 
 If you want to download it for yourself, the project uses:
 * PHP
 * MySQL
-* Tableau Public
+* Tableau Public Javascript API
 
+## Configuration
+
+Create config.ini with database credentials
+* Reference in connection.php
+
+## Notes
+This is not intended to be production-level software, nor was it created as such. It was created for my own educational purposes. 
 
 ## License
 
