@@ -23,4 +23,6 @@ apt-get install -y php7.2-mysql
 sudo service apache2 restart
 
 #Provision MySQL DB/Users
-#mysql -u 
+dbname=$(sed -n -e 's/^\s*dbname\s*=\s*//p' config.ini)
+username=$(sed -n -e 's/^\s*username\s*=\s*//p' config.ini)
+password=$(sed -n -e 's/^\s*password\s*=\s*//p' config.ini)
