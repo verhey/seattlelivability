@@ -13,10 +13,5 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder ".", "/var/www/html", :mount_options => ["dmode=777", "fmode=666"]
 
-  config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
-    apt-get install -y apache2
-    #mysql
-    #php
-  SHELL
+  config.vm.provision "shell", path:"bootstrap.sh"
 end
