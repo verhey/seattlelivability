@@ -26,3 +26,17 @@ sudo service apache2 restart
 dbname=$(sed -n -e 's/^\s*dbname\s*=\s*//p' config.ini)
 username=$(sed -n -e 's/^\s*username\s*=\s*//p' config.ini)
 password=$(sed -n -e 's/^\s*password\s*=\s*//p' config.ini)
+
+if [ -f /root/.my.cnf ]; then
+    mysql -e "CREATE DATABASE $dbname /*\!40100 DEFAULT CHARACTER SET utf8 */;"
+    mysql -e "CREATE USER $username@localhost IDENTIFIED BY '$password';"
+    mysql -e "GRANT ALL PRIVILEGES ON $dbname.* TO '$username'@'localhost';"
+    mysql -e "FLUSH PRIVILEGES;"
+else
+    echo "Please enter root user MySQL password!"
+    read -sp root_password
+    mysql -uroot -p${root_password} -e "CREATE DATABASE $dbname /*\!40100 DEFAULT CHARACTER SET utf8 */;"
+    mysql -uroot -p${root_password} -e "CREATE USER $username@localhost IDENTIFIED BY '$password';"
+    mysql -uroot -p${root_password} -e "GRANT ALL PRIVILEGES ON $dbname.* TO '$username'@'localhost';"
+    mysql -uroot -p${root_password} -e "FLUSH PRIVILEGES;"
+fi
