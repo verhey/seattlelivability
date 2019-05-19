@@ -1,3 +1,16 @@
+# Wait! Before you go any further...
+
+This project is abandoned. This project was originally created for an undergraduate-level course at Western Washington University in 2017. 
+
+I'm leaving it up for posterity, but after looking at it two years later, the following are things I don't like or would have done differently: 
+* There's a lot of code duplication that would be relatively trivial to fix. Especially among the `viz_*` files. 
+* Dynamically generated SQL statements instead of prepared statements. 
+   * Yikes.
+* Code formatting is overall bizarre. 
+* There is minimal-to-no seperation of HTML, CSS, JS, SQL, and PHP.
+* The Tableau vizzes and database running the site are essentially duplicated. 
+  * It's the same data, but the site runs off a MySQL DB, Tableau vizzes run off flat files associated with the visualizations themselves. 
+
 ## Synopsis
 Tool to display Tableau Visualizations on Seattle Open Data based on user input on neighborhoods.
  
@@ -9,17 +22,14 @@ To create an accessible tool that helps users analyze Seattle’s neighborhoods 
 
 ## Installation
 
-Working version can be found at: yorktown.cbe.wwu.edu/students/161/verheyd/seattlelivability
-
-If you want to download it for yourself, the project uses:
-* PHP
-* MySQL
-* Tableau Public Javascript API
+* Install [Vagrant](https://www.vagrantup.com/)
+ * If using something other than VirtualBox for virtualization, make sure you modify the Vagrantfile in the root of the repository to reflect that change. 
+* `vagrant up` 
 
 ## Configuration
 
 Create config.ini with database credentials
-* Reference in connection.php
+* See `includes/connection.php` for reference
 
 ## Notes
 This is not intended to be production-level software, nor was it created as such. It was created for my own educational purposes. 
